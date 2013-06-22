@@ -16,3 +16,9 @@ This repo is dedicated for t193r Community. If you want to join with this class,
 
 Copyright:
 (t193r Community / PT. Sagara Xinix Solusitama)
+
+1. Coding
+2. Hacking
+3. Cracking
+4. Stoning
+5. Towering
