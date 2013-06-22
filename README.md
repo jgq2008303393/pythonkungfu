@@ -14,11 +14,11 @@ This repo is dedicated for t193r Community. If you want to join with this class,
     participants/README.md
 ```
 
-Copyright:
-(t193r Community / PT. Sagara Xinix Solusitama)
+Open Source is always free, so do us.
 
-1. Coding
-2. Hacking
-3. Cracking
-4. Stoning
-5. Towering
+Copyright:
+
+```
+    (t193r Community / PT. Sagara Xinix Solusitama)
+```
+
