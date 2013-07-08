@@ -13,7 +13,12 @@ def index():
     return render_template('index.html')
 
 
-@app.route("/", methods=["POST"])
+@app.route("/calculator")
+def calculator():
+    return render_template('calculator.html')
+
+
+@app.route("/calculator", methods=["POST"])
 def post():
     datas = urllib.unquote(request.data).decode('utf8').encode('ascii', 'ignore')
     segment1 = (datas.split('&')[0]).split('=')[1]

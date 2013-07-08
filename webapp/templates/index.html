@@ -1,42 +1,64 @@
 <!doctype html>
 <html lang="en-US">
 <head>
-    <title>Python</title>
+    <title>WebApp</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="{{ url_for('static', filename='img/favicon.png') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}" />
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/padder.css') }}" />
+    <style type="text/css"> body { padding-top: 60px; } </style>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap-responsive.min.css') }}" />
     <link rel="stylesheet" href="{{ url_for('static', filename='css/font-awesome.min.css') }}" />
     <link rel="stylesheet" href="{{ url_for('static', filename='css/fontomizer.min.css') }}" />
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" />
 </head>
 <body>
-    <div class="container">
-        <div class="row-fluid">
-            <div class="span6 well">
-                <form method="POST" action="">
-                    <fieldset>
-                        <legend>Kalkulator</legend>
-                        <label>Angka Pertama</label>
-                        <input type="text" name="angka1" placeholder="Masukkan angka pertama" />
-                        <label>Operasi</label>
-                        <select name="operasi">
-                            <option value="+">+</option>
-                            <option value="-">-</option>
-                            <option value="*">*</option>
-                            <option value="/">/</option>
-                        </select>
-                        <label>Angka Kedua</label>
-                        <input type="text" name="angka2" placeholder="Masukkan angka kedua" />
-                        <label></label>
-                        <button type="submit" class="btn">Hitung</button>
-                    </fieldset>
-                </form>
+    <div class="navbar navbar-fixed-top">
+        <div class="navbar-inner">
+            <div class="container">
+                <a href="./" class="brand">WebApp</a>
+                <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </a>
+                <div class="nav-collapse collapse">
+                    <ul class="nav nav-pills">
+                        <li class="active">
+                            <a href="#home" data-toggle="tab"><i class="icon-home"></i> Home</a>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="icon-user"></i> Dropdown <b class="caret"></b></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#menu"><i class="icon-fire"></i> Menu</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
             </div>
-            <div class="span6 well">
-                <h1 class="center">Hasil</h1>
-                <hr>
-                <h2 id="hasil" class="center">0.0</h2>
+        </div>
+    </div>
+
+    <div class="container row-fluid">
+        <div class="span3">
+            <ul class="nav nav-list">
+                <li class="nav-header">Our Works</li>
+                <li class="divider"></li>
+                <li class="active"><a href="#calculator" data-toggle="tab"><i class="icon-star"></i> Calculator</a></li>
+                <li><a href="#something" data-toggle="tab"><i class="icon-star"></i> Something</a></li>
+            </ul>
+        </div>
+        <div class="span9 container tab-content">
+            <div class="tab-pane active" id="calculator">
+                <h3>Calculator</h3>
+                <p>
+                    Some description
+                </p>
+                <p>
+                    Go to <a href="calculator">app</a>
+                </p>
+            </div>
+            <div class="tab-pane" id="something">
+                <h3>Something</h3>
             </div>
         </div>
     </div>
@@ -46,7 +68,5 @@
     <script src="{{ url_for('static', filename='js/bootstrap.min.js') }}" type="text/javascript" charset="utf-8"></script>
     <!-- Undersore -->
     <script src="{{ url_for('static', filename='js/underscore.min.js') }}" type="text/javascript" charset="utf-8"></script>
-    <!-- App -->
-    <script src="{{ url_for('static', filename='js/calculator.js') }}" type="text/javascript" charset="utf-8"></script>
 </body>
 </html>
