@@ -15,6 +15,13 @@ def index():
     })
 
 
+@app.route("/temp")
+def temp():
+    return render_template('template.html', data={
+        "title": "WebApp"
+    })
+
+
 @app.route("/calculator")
 def calculator():
     return render_template('calculator.html')
