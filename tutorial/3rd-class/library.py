@@ -11,10 +11,8 @@ employees = db['employees']
 person1 = {"name": "John Doe", "age": 25, "dept": 101, "languages": ["English", "German", "Japanese"]}
 person2 = {"name": "Jane Doe", "age": 25, "dept": 102, "languages": ["English", "Spanish", "French"]}
 
-print "clearing"
 employees.remove()
 
-print "saving"
 employees.save(person1)
 employees.save(person2)
 
