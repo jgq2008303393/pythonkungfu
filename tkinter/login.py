@@ -1,7 +1,6 @@
 #!/usr/bin/env python
 
 from Tkinter import *
-import tkMessageBox
 import tkFont
 
 
