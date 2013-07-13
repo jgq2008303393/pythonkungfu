@@ -70,10 +70,14 @@ class Example(Frame):
         self.parent.bind("<Key 7>", lambda x: self.numCallback("7"))
         self.parent.bind("<Key 8>", lambda x: self.numCallback("8"))
         self.parent.bind("<Key 9>", lambda x: self.numCallback("9"))
+        self.parent.bind("<Key 0>", lambda x: self.numCallback("0"))
         self.parent.bind("<Key plus>", lambda x: self.operationCallback("+"))
         self.parent.bind("<Key minus>", lambda x: self.operationCallback("-"))
         self.parent.bind("<Key asterisk>", lambda x: self.operationCallback("*"))
         self.parent.bind("<Key slash>", lambda x: self.operationCallback("/"))
+        self.parent.bind("<Return>", lambda x: self.equalsCallback())
+        self.parent.bind("<BackSpace>", lambda x: self.clear())
+        self.parent.bind("<Escape>", lambda x: self.quitGracefully())
 
     def numCallback(self, args):
         self.temp += str(args)
@@ -82,6 +86,13 @@ class Example(Frame):
     def operationCallback(self, args):
         self.temp += " " + str(args) + " "
         self.mainLabel['text'] = self.temp
+
+    def clear(self):
+        self.temp = ""
+        self.mainLabel['text'] = "0.0"
+
+    def quitGracefully(self):
+        self.parent.destroy()
 
     def equalsCallback(self):
         string = str(self.temp)
